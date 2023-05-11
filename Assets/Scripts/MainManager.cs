@@ -11,6 +11,7 @@ public class MainManager : MonoBehaviour
 
     public TextMeshProUGUI nameText;
 
+    // ENCAPSULATION
     private string currentName { get; set; }
 
     private void Awake()
