@@ -10,8 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float yPos;
     [SerializeField] float zPos;
 
-    // Encapsulation
-    private GameObject[] currentAnimals { get; } 
+    private GameObject[] currentAnimals = new GameObject[3];
 
     [SerializeField] GameObject[] animalPrefabs;
 
@@ -34,23 +33,15 @@ public class GameManager : MonoBehaviour
         // Abstraction
         CheckForExisting(platform);
 
-        Vector3 position;
-        switch (platform)
-        {
-            case 0:
-                position = new Vector3(firstX, yPos, zPos);
-                break;
-            case 1:
-                position = new Vector3(secondX, yPos, zPos);
-                break;
-            default:
-                position = new Vector3(thirdX, yPos, zPos);
-                break;
-        }
+        // Abstraction
+        Vector3 position = CreateRandomPosition(platform);
+
+        // Turn 180 degrees
+        Quaternion rotation = new Quaternion(0, 180, 0, 0);
 
         // Spawn Random Animal at position
         int index = Random.Range(0, animalPrefabs.Length);
-        Instantiate(animalPrefabs[index], position, animalPrefabs[index].transform.rotation);
+        currentAnimals[platform] = Instantiate(animalPrefabs[index], position, rotation);
     }
 
     // Get rid of animal if there is already one on the given platform
@@ -64,5 +55,19 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Empty Platform!");
         }
+    }
+
+    private Vector3 CreateRandomPosition(int platform)
+    {
+        switch (platform)
+        {
+            case 0:
+                return new Vector3(firstX, yPos, zPos);
+            case 1:
+                return new Vector3(secondX, yPos, zPos);
+            default:
+                return new Vector3(thirdX, yPos, zPos);
+        }
+      
     }
 }

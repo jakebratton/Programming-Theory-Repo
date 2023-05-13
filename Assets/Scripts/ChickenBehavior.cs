@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class ChickenBehavior : Animal
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Polymorphism
     protected override void Speak()
     {
         Debug.Log("Bawk");

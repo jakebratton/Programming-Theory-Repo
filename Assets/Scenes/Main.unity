@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 214089558}
   - component: {fileID: 214089557}
   m_Layer: 5
-  m_Name: Button1
+  m_Name: ButtonMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,7 +303,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 214089558}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1831648997}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SpawnAnimal
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &214089558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,7 +464,7 @@ GameObject:
   - component: {fileID: 587144876}
   - component: {fileID: 587144875}
   m_Layer: 5
-  m_Name: Button2
+  m_Name: ButtonLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,7 +534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 587144876}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1831648997}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SpawnAnimal
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &587144876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,7 +1149,7 @@ GameObject:
   - component: {fileID: 1627865349}
   - component: {fileID: 1627865348}
   m_Layer: 5
-  m_Name: Button3
+  m_Name: ButtonRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1195,7 +1219,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1627865349}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1831648997}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SpawnAnimal
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1627865349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,12 +1697,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0fad8436b46094993e949a721840c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstX: 0
+  firstX: -1.75
   secondX: 0
-  thirdX: 0
-  yPos: 0
-  zPos: 0
-  animalPrefabs: []
+  thirdX: 1.75
+  yPos: 1
+  zPos: -7.5
+  animalPrefabs:
+  - {fileID: 9213206596740143696, guid: 3bd4eb13459efc04fb4e6097b0ca719f, type: 3}
+  - {fileID: 712763581221244047, guid: 196362b23cf6c7f42b498b46e62d7f4a, type: 3}
+  - {fileID: 495403447699483738, guid: 3c06fa866f2be434b97239ee1ab69d3b, type: 3}
+  - {fileID: 2692594753747960197, guid: 9843f84f57901b24989015eec2c123ac, type: 3}
 --- !u!4 &1831648998
 Transform:
   m_ObjectHideFlags: 0
